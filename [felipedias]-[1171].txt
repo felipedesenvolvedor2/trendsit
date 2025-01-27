@@ -1,0 +1,18 @@
+from collections import Counter
+
+leitura = int(input())
+
+lista = []
+
+for i in range(leitura):
+    ler_numeros = int(input())
+    lista.append(ler_numeros)
+
+numero_ocorrencias = Counter(lista)
+
+
+ordenacao = dict(sorted(numero_ocorrencias.items()))
+
+
+for chave, valor in ordenacao.items():
+    print(f'{chave} aparece {valor} vez(es)')
