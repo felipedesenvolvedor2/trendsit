@@ -1,0 +1,15 @@
+qtde_vezes = int(input())
+
+valores = []
+
+for i in range(qtde_vezes):
+    ler_numero = int(input())
+    valores.append(ler_numero)
+
+pares = sorted([x for x in valores if x % 2 == 0])
+impares = sorted([y for y in valores if y % 2 !=0], reverse=True)
+
+tot = pares + impares
+
+for i in tot:
+   print(i)
