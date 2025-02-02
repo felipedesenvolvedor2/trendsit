@@ -1,0 +1,21 @@
+try:
+    while True:
+        qtde_vezes = int(input())
+        custo_dia = int(input())
+
+        lucros = []
+        for _ in range(qtde_vezes):
+            receita_dia = int(input())
+            lucros.append(receita_dia - custo_dia)
+
+        max_lucro = 0
+        lucro_atual = 0
+
+        for lucro in lucros:
+            lucro_atual = max(lucro, lucro_atual + lucro)
+            max_lucro = max(max_lucro, lucro_atual)
+
+        print(max_lucro)
+
+except EOFError:
+    pass
