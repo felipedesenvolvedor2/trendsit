@@ -1,0 +1,8 @@
+C = int(input())
+
+
+for _ in range(C):
+    palavra = input().strip()
+    total_pressao = len(palavra)
+    tempo = total_pressao * 0.01
+    print(f"{tempo:.2f}")
